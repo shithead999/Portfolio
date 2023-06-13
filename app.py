@@ -72,12 +72,12 @@ st.write("#")
 st.subheader("Experience & Qualification")
 st.write(
     """ 
-- ✓ Strong hands on experience and knowledge in Python and Excel
-- ✓ Experienced in Data Analysis, Data Visualization, Data Cleaning, Data Modelling, Data Wrangling
-- ✓ Good understanding of statistical principles and their respective application
-- ✓ Experienced in extracting actionable insight from data
-- ✓ Experienced in building Machine Learning models
-- ✓ Excellent team-player and displaying stong sense of intiative on task
+- ✓ **Strong hands on experience and knowledge in Python and Excel**
+- ✓ **Experienced in Data Analysis, Data Visualization, Data Cleaning, Data Modelling, Data Wrangling**
+- ✓ **Good understanding of statistical principles and their respective application**
+- ✓ **Experienced in extracting actionable insight from data**
+- ✓ **Experienced in building Machine Learning models**
+- ✓ **Excellent team-player and displaying stong sense of intiative on task**
      """
 
 )
@@ -108,9 +108,14 @@ st.write("🎰","**Machine Learning Trainee** | Internshala ")
 st.write("November 2022-January 2023")
 st.write(
     """ 
-- Worked on Linear regression and Logistic regression models
-- Learned about Dimensionality reduction
-- Learned about Decision Tree and Clustering
+   - Developed proficiency in creating Linear and Logistic regression models
+   - Demonstrated expertise in implementing Dimensionality reduction techniques
+   - Acquired knowledge and experience in utilizing Decision Tree algorithms
+   - Gained valuable expertise in implementing Clustering methods
+   - Successfully collaborated with team members to achieve project goals
+   - Conducted thorough research and analysis to inform project decision-making processes
+   - Displayed exceptional problem-solving skills and critical thinking abilities
+   - Adapted quickly to changing project requirements and timelines.
     """
 )
 
