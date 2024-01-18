@@ -2,6 +2,7 @@ from pathlib import Path
 import streamlit as st
 from PIL import Image
 import requests
+import json
 
 # --- PATH SETTINGS---
 current_dir=Path(__file__).parent if "__file__" in locals() else Path.cwd
@@ -31,7 +32,6 @@ PROJECTS ={
     "🏆" "Sentimental Analysis -Sentimental Analysis on Amazon food review":"https://www.kaggle.com/code/sakshijain27/sentimental-analysis-on-amazon-food-reviews"
 }
 
-URL="https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sakshisanghi0001"
 
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
@@ -132,16 +132,16 @@ for project,link in PROJECTS.items():
 st.write("#")
 st.subheader("Blogs")
 st.write("----")
-res=requests.get(URL)
 
-json=res.json()
+with open("blogs.json") as blogs_json:
+    data = json.load(blogs_json)
 col1,col2=st.columns(2,gap="small")
 count=0
-for post in json["items"]:
+for post in data:
     title=post["title"]
-    link=post["link"]
-    publish_date=post["pubDate"]
-    thumbnail=post["thumbnail"]
+    link=post["url"]
+    publish_date=post["date"]
+    thumbnail=post["thumbnail_url"]
     
     with col2 if count%2 else col1:
         st.write("#")
