@@ -1,6 +1,7 @@
 from pathlib import Path
 import streamlit as st
 from PIL import Image
+
 import json
 
 # --- PATH SETTINGS ---
@@ -15,6 +16,25 @@ PAGE_ICON = ":wave:"
 NAME = "Sakshi Jain"
 DESCRIPTION = """
 Data Science Engineer with a strong foundation in AI and Machine Learning, skilled in Python, Data Analysis, and deploying scalable applications.
+=======
+import requests
+import json
+
+# --- PATH SETTINGS---
+current_dir=Path(__file__).parent if "__file__" in locals() else Path.cwd
+css_file= current_dir/"styles"/"main.css"
+resume_file=current_dir/"assets"/"Resume (3).pdf"
+profile_pic=current_dir/"assets"/"profile-pic.png"
+
+
+
+# --- General settings---
+PAGE_TITLE="Digital Resume | Sakshi Jain"
+PAGE_ICON=":wave:"
+NAME="Sakshi Jain"
+DESCRIPTION= """
+Data Science Engineer
+
 """
 EMAIL = "sakshisanghi0001@gmail.com"
 SOCIAL_MEDIA = {
@@ -29,7 +49,11 @@ PROJECTS = {
     "🏆 Sentiment Analysis - Analyzed Amazon food reviews": "https://www.kaggle.com/code/sakshijain27/sentimental-analysis-on-amazon-food-reviews"
 }
 
+
 # --- PAGE CONFIGURATION ---
+=======
+
+
 st.set_page_config(page_title=PAGE_TITLE, page_icon=PAGE_ICON)
 
 # --- LOAD CSS, PDF & PROFILE PIC ---
@@ -149,6 +173,7 @@ for project, link in PROJECTS.items():
 st.write("#")
 st.subheader("Blogs")
 st.write("----")
+
 with open("blogs.json") as blogs_json:
     data = json.load(blogs_json)
 col1, col2 = st.columns(2, gap="small")
@@ -165,3 +190,23 @@ for post in data:
         st.write(f"Published on: {publish_date.split()[0]}")
         st.write(f"[Read more]({link})")
     count += 1
+=======
+
+with open("blogs.json") as blogs_json:
+    data = json.load(blogs_json)
+col1,col2=st.columns(2,gap="small")
+count=0
+for post in data:
+    title=post["title"]
+    link=post["url"]
+    publish_date=post["date"]
+    thumbnail=post["thumbnail_url"]
+    
+    with col2 if count%2 else col1:
+        st.write("#")
+        st.image(thumbnail,width=300)
+        st.header(title)
+        st.write(f"Published on: {publish_date.split()[0]}")
+        st.write(f"[Read more]({link})")
+    count+=1
+
