@@ -25,6 +25,7 @@ SOCIAL_MEDIA = {
 }
 PROJECTS = {
     "🏆 Genetic Algorithm - Solved Shakespeare's monkey example": "https://github.com/shithead999/genetic_algorithm",
+    "🏆 The Movie Library - Creates a list based on your preferences and suggests you the movies": "https://the-movie-library-b6b3.onrender.com/",
     "🏆 Movie Recommendation System - Recommends movies on the trained dataset": "https://bit.ly/3VdGEIX",
     "🏆 Sentiment Analysis - Analyzed Amazon food reviews": "https://www.kaggle.com/code/sakshijain27/sentimental-analysis-on-amazon-food-reviews"
 }
