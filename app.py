@@ -10,7 +10,7 @@ resume_file = current_dir / "assets" / "Resume (3).pdf"
 profile_pic = current_dir / "assets" / "profile-pic.png"
 
 # --- GENERAL SETTINGS ---
-PAGE_TITLE = "Digital Resume | Sakshi Jain"
+PAGE_TITLE = "Digital CV | Sakshi Jain"
 PAGE_ICON = ":wave:"
 NAME = "Sakshi Jain"
 DESCRIPTION = """
